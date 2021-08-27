@@ -262,16 +262,7 @@ hr {
     cursor: pointer;
     box-shadow: 1px 1px 1px 1px rgb(168, 168, 168);   
 }
-.footer-link a:hover {
-    background-color: rgb(151, 14, 14);
-}
-/* .transition-cover {
-    position: fixed;
-    top: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: red;
-} */
+
 @media only screen and (min-width : 992px) {
     .banner img {
         border-radius: 5px;
