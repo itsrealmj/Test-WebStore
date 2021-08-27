@@ -7,7 +7,7 @@ body {
     background-color: rgb(201, 238, 226);
 }
 .menu-modal-bg {
-    /*background-color: aquamarine;*/
+    background-color: rgba(129, 128, 128, 0.7);
     position: fixed;
     top: 0;
     width: 100vw;
@@ -16,18 +16,37 @@ body {
     visibility: hidden;
 }
 .menu-modal {
-    background-color: red;
-    width: 80vw;
-    height: 80vh;
+    background-color: rgb(151, 150, 150);
+    border-radius: 3px;
+    box-shadow: 1px 1px  3px rgb(252, 249, 249);
     position: fixed;
-    top: 8%;
-    left: 50%;
+    width: 50%;
+    top: 25%;
+    left:25%; 
 }
+.menu-modal ul  {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    line-height: 5rem;
+    font-size: 1.5rem;      
+}
+
 .menu-modal-bg-active {
     visibility: visible;
     opacity: 1;
-    transition: 1s ease;
+    transition: .5s ease;
 }
+#closed-menu {
+    position: relative;
+    /* bottom: 1rem; */
+    float: right;
+    margin:  .5rem ;
+    cursor: pointer;
+
+} 
 
 .order-modal {
     background-color: aquamarine;
@@ -39,8 +58,6 @@ body {
     border-radius: 5px;
     border-top: 5px solid rgb(17, 99, 48);
     visibility: hidden;
-    
-    
 }
 .oder-modal-closed-btn {
     position: relative;
@@ -64,17 +81,13 @@ body {
 }
 .order-modal-active {
     opacity: 1;
-    visibility:visible;
-    
+    visibility:visible;  
 }
-
 header {
     display: flex;
     justify-content: flex-start;
     width: 80vw;
     margin: 0 auto;
-    /*grid-template-columns: 2fr 1fr;*/
-    /*justify-content: center;*/
     align-items: center; 
 }
 header a {
