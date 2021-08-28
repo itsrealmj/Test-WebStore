@@ -9,20 +9,63 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <p id="salamat"></p>
+    <!-- Messenger Chat Plugin Code -->
+    <div id="fb-root"></div>
+    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
+
+    <script>
+      var chatbox = document.getElementById('fb-customer-chat');
+      chatbox.setAttribute("page_id", "105122471893746");
+      chatbox.setAttribute("attribution", "biz_inbox");
+
+      window.fbAsyncInit = function() {
+        FB.init({
+          xfbml            : true,
+          version          : 'v11.0'
+        });
+      };
+
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
+     <!-- Messenger Chat Plugin Code end-->
+    
+    <!-- BIG - SCREEN - MENU -->
     <header>
+        <div>
             <div class="main-logo"><img src="./images/logo.jpg" width="60px" alt="main-logo"></div>
             <div>
-                <img src="./images/menu.svg" alt="" width="25px" id="menu">
-                <!-- <a href="">nav 1</a>
-                <a href="">nav 2</a>
-                <a href="">nav 3</a> -->
+                <img src="./images/menu.svg" alt="" width="25px" id="menu" style="cursor: pointer;">
+                    <a href="">Home</a>
+                    <a href="index.html">Drinks</a>
+                    <a href="FoodSection.html">Food</a>
             </div>
+        </div>    
     </header>
+    <!-- MOBILE - VIEW - MENU -->
+    <div class="menu-modal-bg">
+        <div class="menu-modal">
+            <div id="closed-menu"><img src="./images/closed.svg"></div>
+            <div>
+                <ul>
+                  <li><a href="#">Home</a></li> 
+                  <li><a href="index.html">Drinks</a></li>
+                  <li><a href="FoodSection.html">Food</a></li> 
+                </ul>
+            </div>
+        </div>
+    </div>
 
+    <!-- BANNER - TOP -->
     <div class="banner">
         <div>
-            <h1 style="text-align: center;">WanderCup's Foods</h1> 
+            <h1 style="text-align: center;">WanderCup's Best Seller</h1> 
             <hr>
         </div>
         <div>
@@ -32,7 +75,8 @@
         </div>   
     </div>
 
-    <h4 style="text-align: center;">Lorem ipsum dolor sit amet consectetur.</h4>
+    <!-- MAIN - PRODUCT - CONTAINER -->
+    <h2 style="text-align: center;">Lorem ipsum dolor sit amet consectetur.</h2>
 <div class="main-content">
     <section>
         <div class="product-container">
@@ -41,23 +85,20 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, eveniet.</p>
                 <div class="order-section">
                     <p class="price">$100. 00 </p>
-                    <div class="order-btn">
-                        <a href="https://www.facebook.com/wandercupph"> <img src="./images/fb.svg" width="25px"><span>order here</span></a>
-                    </div>
-                    
                 </div>
             </div>
             <div class="product-img">
                 <img src="./images/food.jpg" alt="food" >
             </div>
         </div>
+        <hr>
     </section>
-
+    
     <section>
         <div class="product-container">
             
             <div class="product-img">
-                <img src="./images/food.jpg" alt="food" >
+                <img src="./images/food.jpg" alt="drinks" >
             </div>
 
             <div class="description">
@@ -65,13 +106,10 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, eveniet.</p>
                 <div class="order-section">
                     <p class="price">$100. 00 </p>
-                    <div class="order-btn">
-                        <a href="https://www.facebook.com/wandercupph"> <img src="./images/fb.svg" width="25px"><span>order here</span></a>
-                    </div>
-                    
                 </div>
             </div>
         </div>
+        <hr>
     </section>
     
     <section>
@@ -80,37 +118,31 @@
                 <h2>Test title</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, eveniet.</p>
                 <div class="order-section">
-                    <p class="price">$100. 00 </p>
-                    <div class="order-btn">
-                        <a href="https://www.facebook.com/wandercupph"> <img src="./images/fb.svg" width="25px"><span>order here</span></a>
-                    </div>
-                    
+                    <p class="price">$100. 00 </p>                   
                 </div>
             </div>
             <div class="product-img">
-                <img src="./images/food.jpg" alt="food" >
+                <img src="./images/food.jpg" alt="drinks" >
             </div>
         </div>
+        <hr>
     </section>
     <section>
         <div class="product-container">
             
             <div class="product-img">
-                <img src="./images/food.jpg" alt="food" >
+                <img src="./images/food.jpg" alt="drinks" >
             </div>
 
             <div class="description">
                 <h2>Test title</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, eveniet.</p>
                 <div class="order-section">
-                    <p class="price">$100. 00 </p>
-                    <div class="order-btn">
-                        <a href="https://www.facebook.com/wandercupph"> <img src="./images/fb.svg" width="25px"><span>order here</span></a>
-                    </div>
-                    
+                    <p class="price">$100. 00 </p>                   
                 </div>
             </div>
         </div>
+        <hr>
     </section>
   
     <section>
@@ -119,23 +151,20 @@
                 <h2>Test title</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, eveniet.</p>
                 <div class="order-section">
-                    <p class="price">$100. 00 </p>
-                    <div class="order-btn">
-                        <a href=""> <img src="./images/fb.svg" width="25px"><span>order here</span></a>
-                    </div>
-                    
+                    <p class="price">$100. 00 </p>                   
                 </div>
             </div>
             <div class="product-img">
-                <img src="./images/food.jpg" alt="food" >
+                <img src="./images/food.jpg" alt="drinks" >
             </div>
         </div>
+        <hr>
     </section>
     <section>
         <div class="product-container">
             
             <div class="product-img">
-                <img src="./images/food.jpg" alt="food" >
+                <img src="./images/food.jpg" alt="drinks" >
             </div>
 
             <div class="description">
@@ -143,34 +172,63 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, eveniet.</p>
                 <div class="order-section">
                     <p class="price">$100. 00 </p>
-                    <div class="order-btn">
-                        <a href=""> <img src="./images/fb.svg" width="25px"><span>order here</span></a>
-                    </div>
-                    
                 </div>
             </div>
         </div>
+        <hr>
     </section>
+
+    <section>
+        <div class="product-container">
+            <div class="description">
+                <h2>Test title</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, eveniet.</p>
+                <div class="order-section">
+                    <p class="price">$100. 00 </p>                   
+                </div>
+            </div>
+            <div class="product-img">
+                <img src="./images/food.jpg" alt="drinks" >
+            </div>
+        </div>
+        <hr>
+    </section>
+    <section>
+        <div class="product-container">
+            
+            <div class="product-img">
+                <img src="./images/food.jpg" alt="drinks" >
+            </div>
+
+            <div class="description">
+                <h2>Test title</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, eveniet.</p>
+                <div class="order-section">
+                    <p class="price">$100. 00 </p>
+                </div>
+            </div>
+        </div>
+        <hr>
+    </section>
+    
 </div>
     <br>
     <br>
     <br>
     <br>
     <br>
-
-    <div class="per">
+    <!-- CUSTOMER - FEEDBACK -->
+    <p id="customer-feedback">Customer's feedback</p>
+    <div class="customer-feedback-wrapper">
         <div class="person-descripton">
             <img src="" id="personImage">
             <p id="personName"></p>
             <p id="jobPosition"></p>
             <p id="jobDescription"></p>
             <div class="icons">
-                <div class="icon" id="preview">&#10096;
-                </div>
-                <div class="icon" id="next">&#10097;
-                </div>
+                <div class="icon" id="preview">&#10096;</div> 
+                <div class="icon" id="next">&#10097;</div>
             </div>
-            <p id="customer-feedback">Customer's feedback</p>
         </div>			
     </div>
 
@@ -178,23 +236,28 @@
     <br>
     <br>
     <br>
-    <div class="menu-modal-bg">
-        <div class="menu-modal">
-            <span id="closed-menu">x</span>
+    
+    <div class="order-modal-bg">
+        <div class="order-modal">
+                <div > <p class="oder-modal-closed-btn">✗</p></div>
+            <form class="order-modal-form">
+               
+                <h4>Fill out below</h4>
+                <input type="text" name="name" placeholder="Enter name here">
+                <input type="email" name="email" placeholder="Enter email here">
+                <input type="submit" style="cursor: pointer;">
+            </form>
         </div>
     </div>
-    <!-- <div class="transition-cover">
-    </div> -->
-<footer>
-    <div class="footer-link">
-        <div><a href="index.html">Our Drinks <i class="fa fa-glass" aria-hidden="true"></i></a></div> 
-        <div><a href="FoodSection.html">Our Food <i class="fa fa-cutlery" aria-hidden="true"></i></a></div>
-        
-        
-    </div>
-    
+<footer style="text-align: center">
+    <p> Copyright &copy; 2021 "itsrealmj". All Rights Reserved </p>
 </footer>
-
+<br>
+<br>
+<br>
+<script>
+    
+</script>
 <script src="index.js"></script>
 
 </body>
