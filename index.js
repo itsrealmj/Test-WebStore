@@ -12,13 +12,6 @@
         menuModalBg.classList.remove('menu-modal-bg-active')
     })
 // menu-bar end
-// order modal 
-    let price = document.querySelector('.price')
-    let orderModal = document.querySelector('.order-modal')
-            price.addEventListener('click', function(){ 
-            orderModal.classList.add('order-modal-active')
-    })
-// order modal end
 var reviews = [
     {
     uniqueNumber : 0,
