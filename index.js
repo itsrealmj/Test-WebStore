@@ -6,12 +6,59 @@
     
     menu.addEventListener('click', function(){              
         menuModalBg.classList.add('menu-modal-bg-active'); 
-
     })
     closedMenu.addEventListener('click', function(){
         menuModalBg.classList.remove('menu-modal-bg-active')
     })
 // menu-bar end
+    let first =  document.querySelector('#first');
+    let productContainer = document.querySelectorAll('.product-container')
+    let productPopupBg = document.querySelector('.product-popup-bg');
+    let plus = document.getElementById('plus');
+    let minus = document.getElementById('minus');
+    let count = document.getElementById('count');
+    let availableStock = document.getElementById('available-stock');
+    let placeOrderBtn = document.getElementById('place-order-btn');
+    let closedBtnPopup = document.querySelector('.closed-btn-popup');
+    let payment = document.getElementById('payment');
+
+         
+    productContainer[0].addEventListener('click', function(){ 
+                   productPopupBg.classList.add('active-BG');
+            });
+            closedBtnPopup.addEventListener('click', function(){
+                productPopupBg.classList.remove('active-BG');
+            });
+    
+
+        count.innerHTML = 1;
+
+        plus.addEventListener('click', function(){
+            count.innerHTML++;
+            availableStock.innerHTML--;
+            payment.innerHTML = 100 * count.innerHTML;
+            
+        });
+
+        minus.addEventListener('click', function(){
+            count.innerHTML--;
+            if ( count.innerHTML = 0) {
+                availableStock = availableStock.value; 
+            }
+            availableStock.innerHTML++;
+            payment.innerHTML = 100 * count.innerHTML;
+            if (count.innerHTML < 0 ) {
+                count.innerHTML = 0;
+
+            }
+        });
+
+        placeOrderBtn.addEventListener('click', function(){
+            productPopupBg.remove();
+            alert("Successfully Ordered " + count.innerHTML + " PCS")
+
+        });    
+// 
 var reviews = [
     {
     uniqueNumber : 0,
@@ -41,19 +88,19 @@ let personImage = document.getElementById('personImage');
 // let jobPosition = document.getElementById('jobPosition');
 // let jobDescription = document.getElementById('jobDescription');
 
-let preview = document.querySelector('#preview');
-let next = document.querySelector('#next');
+const preview = document.querySelector('#preview');
+const next = document.querySelector('#next');
 
 
 
-var currentDisplay = 0;
+let currentDisplay = 2;
 
 window.addEventListener('DOMContentLoaded',function(){
     showperson();
 });
 
 function showperson() {
-    var item = reviews[currentDisplay];
+    let item = reviews[currentDisplay];
     personImage.src = item.personImage; 
     // personName.textContent = item.personName;
     // jobPosition.textContent = item.jobPosition;

@@ -10,7 +10,7 @@
 </head>
 <body>
     <!-- Messenger Chat Plugin Code -->
-    <div id="fb-root"></div>
+    <!-- <div id="fb-root"></div>
     <div id="fb-customer-chat" class="fb-customerchat">
     </div>
 
@@ -33,7 +33,7 @@
         js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
         fjs.parentNode.insertBefore(js, fjs);
       }(document, 'script', 'facebook-jssdk'));
-    </script>
+    </script> -->
      <!-- Messenger Chat Plugin Code end-->
     
     <!-- BIG - SCREEN - MENU -->
@@ -62,7 +62,7 @@
         </div>
     </div>
 
-    <!-- BANNER - TOP -->
+    <!-- BANNER - TOP -->   
     <div class="banner">
         <div>
             <h1 style="text-align: center;">WanderCup's Best Seller</h1> 
@@ -77,28 +77,22 @@
 
     <!-- MAIN - PRODUCT - CONTAINER -->
     <h2 style="text-align: center;">Lorem ipsum dolor sit amet consectetur.</h2>
+
 <div class="main-content">
-    <section>
-        <div class="product-container">
-            <div class="description">
-                <span class="item-name">Test title</span>
-
+    <div class="product-container" id="first">
+            <div class="product-img">
+                <img src="./images/drinks.jpg" alt="food" >
+            </div>
+            <div class="description" >
+                <span class="item-name" >Test title</span>
                 <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, eveniet.</span>
-                    
-                <span class="item-price">$100. 00 </span>
-                
-            </div>
+                <span class="item-price">$100. 00 </span>               
+            </div>            
+    </div>
+
+    <div class="product-container">
             <div class="product-img">
-                <img src="./images/drinks.jpg" alt="food" >
-            </div>
-        </div>
-        <hr>
-    </section>
-    
-    <section>
-        <div class="product-container">
-            <div class="product-img">
-                <img src="./images/drinks.jpg" alt="food" >
+                <img src="./images/food.jpg" alt="food" >
             </div>
 
             <div class="description">
@@ -108,31 +102,22 @@
                 <span class="item-price">$100. 00 </span>
                 
             </div>
-        </div>
-        <hr>
-    </section>
-    
-    <section>
-        <div class="product-container">
-            <div class="description">
-                <span class="item-name">Test title</span>
+    </div>
 
+    <div class="product-container">
+            <div class="product-img">
+                <img src="./images/drinks.png" alt="food" >
+            </div>
+            <div class="description" >
+                <span class="item-name" >Test title</span>
                 <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, eveniet.</span>
-                    
-                <span class="item-price">$100. 00 </span>
-                
-            </div>
-            <div class="product-img">
-                <img src="./images/drinks.jpg" alt="food" >
-            </div>
-        </div>
-        <hr>
-    </section>
+                <span class="item-price">$100. 00 </span>               
+            </div>            
+    </div>
     
-    <section>
-        <div class="product-container">
+    <div class="product-container">
             <div class="product-img">
-                <img src="./images/drinks.jpg" alt="food" >
+                <img src="./images/food.png" alt="food" >
             </div>
 
             <div class="description">
@@ -142,96 +127,62 @@
                 <span class="item-price">$100. 00 </span>
                 
             </div>
-        </div>
-        <hr>
-    </section>
-  
-    <section>
-        <div class="product-container">
-            <div class="description">
-                <span class="item-name">Test title</span>
-
-                <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, eveniet.</span>
-                    
-                <span class="item-price">$100. 00 </span>
-                
-            </div>
-            <div class="product-img">
-                <img src="./images/drinks.jpg" alt="food" >
-            </div>
-        </div>
-        <hr>
-    </section>
+    </div>
     
-    <section>
-        <div class="product-container">
-            <div class="product-img">
-                <img src="./images/drinks.jpg" alt="food" >
-            </div>
-
-            <div class="description">
-                <span class="item-name">Test title</span>
-
-                <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, eveniet.</span>    
-                <span class="item-price">$100. 00 </span>
-                
-            </div>
-        </div>
-        <hr>
-    </section>
-
-   <section>
-        <div class="product-container">
-            <div class="description">
-                <span class="item-name">Test title</span>
-
-                <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, eveniet.</span>
-                    
-                <span class="item-price">$100. 00 </span>
-                
-            </div>
-            <div class="product-img">
-                <img src="./images/drinks.jpg" alt="food" >
-            </div>
-        </div>
-        <hr>
-    </section>
-    
-    <section>
-        <div class="product-container">
-            <div class="product-img">
-                <img src="./images/drinks.jpg" alt="food" >
-            </div>
-
-            <div class="description">
-                <span class="item-name">Test title</span>
-
-                <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, eveniet.</span>    
-                <span class="item-price">$100. 00 </span>
-                
-            </div>
-        </div>
-        <hr>
-    </section>
-    
+        
 </div>
+   
+
+
+<div class="product-popup-bg">
+        <div class="product-popup">
+            <span class="closed-btn-popup"> X</span>
+            <div class="product-content">
+                <img src="./images/drinks.jpg" width="200">
+                <p>Title</p>
+                <div class="quantity">
+                    <span class="qty" id="minus"> - </span> <span id="count"> 1 </span> <span class="qty" id="plus"> + </span>
+                </div>
+
+                <div style="margin-top: 2rem;"> 
+                    stocks available 
+                    <span id="available-stock"> 100 </span>
+                    <br>
+                    <br>
+                    payment
+                    <span id="payment"> 100 </span>
+                </div>
+                <button id="place-order-btn">Place Order</button>    
+            </div>
+        </div>
+</div>
+    
+
     <br>
     <br>
     <br>
     <br>
     <!-- CUSTOMER - FEEDBACK -->
     <p id="customer-feedback">Customer's feedback</p>
-    <div class="customer-feedback-wrapper">
-        <div class="person-descripton">
-            <img src="" id="personImage">
-          <!--   <p id="personName"></p>
-            <p id="jobPosition"></p>
-            <p id="jobDescription"></p> -->
-            <div class="icons">
-                <div class="icon" id="preview">&#10096;</div> 
-                <div class="icon" id="next">&#10097;</div>
-            </div>
-        </div>			
+
+    <div class="feedback">
+        <div class="icons">
+            <div class="icon" id="preview">&#10096;</div> 
+            
+        </div>
+        <div class="customer-feedback-wrapper">
+            <div class="person-descripton">
+                <img src="" id="personImage">
+                                <!--   <p id="personName"></p>
+                                <p id="jobPosition"></p>
+                                <p id="jobDescription"></p> -->
+                
+            </div>			
+        </div>
+        <div class="icons">
+            
+            <div class="icon" id="next">&#10097;</div>
+        </div>
     </div>
 
     <br>
@@ -240,7 +191,7 @@
     
 <footer style="text-align: center">
     <p> Copyright &copy; 2021 "itsrealmj". All Rights Reserved </p>
-</footer>
+</footer>   
 <br>
 <br>
 <script>

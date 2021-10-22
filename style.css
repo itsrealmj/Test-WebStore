@@ -6,6 +6,63 @@ body {
     color: #303030;
     background-color: rgb(201, 238, 226);
 }
+
+.product-popup-bg {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff;
+    visibility: hidden;
+    opacity: 0;
+}
+.active-BG {
+    visibility: visible;
+    opacity: 1;
+}
+.product-popup-bg img {
+    width: 40vw;
+    height: 30%;
+    border-radius: 5px;
+}
+.product-popup {
+    background-color: #f1f1; 
+    width: 80%;
+    height: 80%;
+    margin: 10% auto;   
+    border-radius: 5px;
+}
+
+.product-popup .quantity span{
+    margin: 0 1rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+.product-content .qty {
+    background-color: red;
+    padding: .5rem;
+}
+.product-popup button {
+    width: 80%;
+    padding: .5rem 1rem;
+    margin-top: 2rem;
+}
+.closed-btn-popup {
+    float: right;
+    padding: .3rem .5rem;
+    /*margin: .5rem .7rem;*/
+    background-color: darkred;
+    color: white;
+}
+.product-content {
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+/**/
 .menu-modal-bg {
     background-color: rgba(129, 128, 128, 0.7);
     position: fixed;
@@ -55,41 +112,7 @@ body {
 
 } 
 
-.order-modal {
-    background-color: aquamarine;
-    height: 30vh;
-    width: 50vw;
-    position: fixed;
-    top: 15%;
-    left: 20%;
-    border-radius: 5px;
-    border-top: 5px solid rgb(17, 99, 48);
-    visibility: hidden;
-}
-.oder-modal-closed-btn {
-    position: relative;
-    bottom: 1rem;
-    float: right;
-    cursor: pointer;
-    padding: 0 .3rem;
-}
-.order-modal-form {
-     padding: 0 1.5rem;
-}
 
-.oder-modal-closed-btn:hover { background-color: rgba(87, 85, 85, 0.308);}
-.order-modal-form input{
-    display: flex;
-    padding: .3rem .5rem;
-    border-radius: 3px;
-    border:none;
-    line-height: 1rem;
-    margin: .5rem 0;;
-}
-.order-modal-active {
-    opacity: 1;
-    visibility:visible;  
-}
 header {
     width: 100%;
     height: 10vh;
@@ -141,7 +164,6 @@ hr {
     border-radius: 5px;
     width: 90vw;
 }
-
 .product-container {
     background-color: #fafafa;
     display: grid;
@@ -155,6 +177,7 @@ hr {
     box-shadow: 1px 2px 2px 2px rgb(150, 149, 149);
     align-items: center;
     color: #4f4f4f;
+    cursor: pointer;
 }
 
 .product-img img {
@@ -164,11 +187,17 @@ hr {
 }
 
 /* carousel *************************************************************/
+
+.feedback {
+    display: flex;
+    align-items: center;
+}
 .customer-feedback-wrapper {
 	display: flex;
 	justify-content: center;
 	align-content: center;
 	align-items: center;
+    padding: ;
 }
 .person-descripton {
 	border-radius: 5px;
@@ -178,7 +207,7 @@ hr {
 	margin-bottom: 1rem;
 }
 #personImage {
-    width: 80vw;
+    width: 70vw;
     height: 50vh;
     border-radius: 5px;
 }
@@ -286,7 +315,7 @@ hr {
         background-color: #fafafa;
         display: grid;
         grid-template-columns: 1fr 1fr;
-        width: 90%;
+        width: 80%;
         height: 40vh;
         margin: 0 auto;
         padding: 1rem;
@@ -297,7 +326,7 @@ hr {
         letter-spacing: 1px;
     }
     .product-img img {
-        width: 20vw;
+        width: 15vw;
         height: 30vh;
         border-radius: 5px;
     }
